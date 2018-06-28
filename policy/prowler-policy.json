@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "acm:DescribeCertificate",
+        "acm:ListCertificates",
+        "es:DescribeElasticsearchDomainConfig",
+        "logs:DescribeLogGroups",
+        "logs:DescribeMetricFilters",
+        "ses:GetIdentityVerificationAttributes",
+        "sns:ListSubscriptionsByTopic"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
