@@ -3,13 +3,18 @@
   "Statement": [
     {
       "Action": [
-        "acm:DescribeCertificate",
-        "acm:ListCertificates",
-        "es:DescribeElasticsearchDomainConfig",
+        "acm:describecertificate",
+        "acm:listcertificates",
+        "es:describeelasticsearchdomainconfig",
         "logs:DescribeLogGroups",
         "logs:DescribeMetricFilters",
-        "ses:GetIdentityVerificationAttributes",
-        "sns:ListSubscriptionsByTopic"
+        "ses:getidentityverificationattributes",
+        "sns:listsubscriptionsbytopic",
+        "guardduty:ListDetectors",
+        "trustedadvisor:Describe*",
+        "cloudtrail:GetEventSelectors",
+        "apigateway:GET",
+        "support:*"
       ],
       "Effect": "Allow",
       "Resource": "*"
