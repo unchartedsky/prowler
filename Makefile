@@ -1,5 +1,5 @@
 BIN=prowler
-IMAGE=unchartedsky/$(BIN)
+IMAGE=ghcr.io/unchartedsky/$(BIN)
 
 image:
 	docker build -t $(IMAGE):latest .

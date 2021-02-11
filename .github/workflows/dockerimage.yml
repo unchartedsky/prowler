@@ -1,0 +1,24 @@
+name: Dockerize
+
+on:
+  push:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    # At 00:00 on Sunday.
+    # https://crontab.guru/#0_0_*_*_7
+    - cron:  '30 3 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: azure/docker-login@v1
+      with:
+        login-server: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.PAT_ANDROMEDARABBIT }}
+    - name: Publish to Registry
+      run: |
+        make image
+        make deploy
